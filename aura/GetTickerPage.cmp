@@ -1,0 +1,14 @@
+<!--
+    simple aira component that has 2 input values and a button
+    when button is clicked it will call scrapeData from JS
+    -->
+<aura:component implements="force:appHostable" access="global" controller="GetTickerPageController">
+    <aura:attribute name="ticker" type="String"/>
+    <aura:attribute name="date" type="String"/>
+    <apex:form>
+        <apex:inputfield value="{!v.ticker}" label="Enter ticker name"/>
+        <apex:inputfield value="{!v.date}" label="Enter date"/>
+        <apex:commandButton value="Scrape Data" action="{!c.scrapeData}"/>
+    </apex:form>
+<aura:component
+
